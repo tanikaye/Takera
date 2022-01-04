@@ -1,19 +1,14 @@
 import React from "react";
 import ListingCard from "./ListingCard";
 
-function Purchases({ listings, onRemoveListing, items }) {
-  // const [purchases, setPurchases] = useState([]);
-
-
-
+function ListingsContainer({ listings, onRemoveListing }) {
   return (
     <main>
       <ul className="cards">
-        {items.map((item) => (
+        {listings.map((listing) => (
           <ListingCard
-          price={item.price}
-            key={item.id}
-            item={item}
+            key={listing.id}
+            listing={listing}
             onRemoveListing={onRemoveListing}
           />
         ))}
@@ -22,4 +17,4 @@ function Purchases({ listings, onRemoveListing, items }) {
   );
 }
 
-export default Purchases;
+export default ListingsContainer;
