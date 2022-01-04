@@ -11,7 +11,7 @@ body {
 
 header {
   border-bottom: 1px #ccc solid;
-  background: #eee;
+  background: rgb(67, 95, 218);
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -88,10 +88,14 @@ main {
   flex-wrap: wrap;
 }
 
+.app {
+  background-color: yellow;
+}
+
 .card {
   margin: 1rem;
   box-shadow: 0 0 7px 0 #ddd;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid #ccc;
   width: 300px;
 }
