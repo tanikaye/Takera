@@ -1,16 +1,34 @@
 import React, { useEffect, useState } from "react";
+import { Switch, Route } from "react-router-dom"
 import Header from "./Header";
 import ListingsContainer from "./ListingContainer";
+import Purchases from "./Purchases";
+// import NavBar from "./NavBar";
+
 
 function App() {
   const [listings, setListings] = useState([]);
   const [search, setSearch] = useState("");
+  const [items, setItems] = useState([]);
+  // const [page, setPage] = useState("/ListingContainer")
+
+  function onAddItem(newItem) {
+    const updatedItemsArray = [...items, newItem];
+    setItems(updatedItemsArray);
+  }
+
 
   useEffect(() => {
     fetch("/items")
       .then((r) => r.json())
-      .then(setListings);
+      .then(data => setListings(data));
   }, []);
+
+  // function sayHello() {
+  //   alert('You clicked me!');
+
+  // }
+
 
   function handleRemoveListing(id) {
     const newListings = listings.filter((listing) => listing.id !== id);
@@ -23,11 +41,27 @@ function App() {
 
   return (
     <div className="app">
+          {/* <Header onChangePage={setPage}/> */}
+          <Switch>
+        <Route path ="/items">
+              <Items/>
+        </Route>
+        <Route path="/purchases">
+              <Purchases/>
+        </Route>
+        <Route path ="/about">
+              <About/>
+        </Route>
+
+    </Switch>
+
       <Header onSearch={setSearch} />
       <ListingsContainer
+      onAddItem={onAddItem}
         listings={displayedListings}
         onRemoveListing={handleRemoveListing}
       />
+      <Purchases items={items}/>
     </div>
   );
 }
