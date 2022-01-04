@@ -7,7 +7,7 @@ function ListingCard({
   const [favorite, setFavorite] = useState(false);
 
   function handleDeleteClick() {
-    fetch(`http://localhost:6001/listings/${id}`, {
+    fetch(`/items/${id}`, {
       method: "DELETE",
     });
     onRemoveListing(id);

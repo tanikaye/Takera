@@ -8,7 +8,7 @@ function Header({ onSearch }) {
         <span className="logo" role="img">
           ☮
         </span>
-        gregslist
+        Takera
       </h1>
       <Search onSearch={onSearch} />
     </header>
