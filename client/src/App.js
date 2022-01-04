@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import ListingsContainer from "./ListingsContainer";
+import ListingsContainer from "./ListingContainer";
 
 function App() {
   const [listings, setListings] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6001/listings")
+    fetch("/items")
       .then((r) => r.json())
       .then(setListings);
   }, []);
@@ -18,7 +18,7 @@ function App() {
   }
 
   const displayedListings = listings.filter((listing) =>
-    listing.description.toLowerCase().includes(search.toLowerCase())
+    listing.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
