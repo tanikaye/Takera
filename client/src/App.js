@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom"
 import Header from "./Header";
-import ListingsContainer from "./ListingContainer";
-import Purchases from "./Purchases";
+import ListingContainer from "./ListingContainer";
+import PurContainer from "./PurContainer";
+import NavBar from "./NavBar";
+import About from "./About";
+
 // import NavBar from "./NavBar";
 
 
@@ -10,13 +13,35 @@ function App() {
   const [listings, setListings] = useState([]);
   const [search, setSearch] = useState("");
   const [items, setItems] = useState([]);
+  // const [boughtItem, setBoughtItem] = useState([]);
+
+
   // const [page, setPage] = useState("/ListingContainer")
+
+  function handleAddItem (id) {
+    // e.preventDefault();
+    // setBoughtItem(e.target.value)
+    // console.log("here is the bog=ught item", boughtItem)
+    fetch("/purchases", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        item_id: id,
+        user_id: 1
+      }),
+    })
+      .then((r) => r.json())
+      .then((newItem) => onAddItem(newItem))
+  }
+
 
   function onAddItem(newItem) {
     const updatedItemsArray = [...items, newItem];
     setItems(updatedItemsArray);
+    console.log("array of bought items", items)
   }
-
 
   useEffect(() => {
     fetch("/items")
@@ -30,9 +55,14 @@ function App() {
   // }
 
 
+  // function handleRemoveListing(id) {
+  //   const newListings = listings.filter((listing) => listing.id !== id);
+  //   setListings(newListings);
+  // }
+
   function handleRemoveListing(id) {
-    const newListings = listings.filter((listing) => listing.id !== id);
-    setListings(newListings);
+    const newItems = items.filter((item) => item.item.id !== id);
+    setItems(newItems);
   }
 
   const displayedListings = listings.filter((listing) =>
@@ -42,26 +72,29 @@ function App() {
   return (
     <div className="app">
           {/* <Header onChangePage={setPage}/> */}
+
+          <NavBar/>
+          <Header onSearch={setSearch} />
           <Switch>
-        <Route path ="/items">
-              <Items/>
+        <Route path ="/ListingContainer">
+              <ListingContainer
+              handleAddItem={handleAddItem}
+              items={items}
+              onAddItem={onAddItem}
+        listings={displayedListings}
+        onRemoveListing={handleRemoveListing}/>
         </Route>
-        <Route path="/purchases">
-              <Purchases/>
+        <Route path="/PurContainer">
+              <PurContainer items={items} onRemoveListing={handleRemoveListing}/>
         </Route>
-        <Route path ="/about">
+        <Route path ="/About">
               <About/>
         </Route>
 
     </Switch>
 
-      <Header onSearch={setSearch} />
-      <ListingsContainer
-      onAddItem={onAddItem}
-        listings={displayedListings}
-        onRemoveListing={handleRemoveListing}
-      />
-      <Purchases items={items}/>
+
+
     </div>
   );
 }

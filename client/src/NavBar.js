@@ -7,9 +7,9 @@ function NavBar() {
 
     return (
         <nav className = "navBar">
-            <Link class="hello" to="/Items">Items</Link>
-            <Link class="hello" to="/About">About</Link>
-            <Link class="hello" to="/Purchases">Purchases</Link>
+            <Link className="hello" to="/ListingContainer">Items</Link>
+            <Link className="hello" to="/About">About</Link>
+            <Link className="hello" to="/PurContainer">Purchases</Link>
         </nav>
     );
 }
