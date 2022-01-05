@@ -1,7 +1,8 @@
 import React from "react";
 import ListingCard from "./ListingCard";
 
-function ListingsContainer({ listings, onRemoveListing, onAddItem }) {
+function ListingContainer({ listings, onRemoveListing, onAddItem, items, handleAddItem }) {
+  // i want to map out listings on the main page, but also map out items on the purchases page. how???
   return (
     <main className="page">
       <ul className="cards">
@@ -9,9 +10,11 @@ function ListingsContainer({ listings, onRemoveListing, onAddItem }) {
           <ListingCard
           name={listing.name}
           price={listing.price}
-            key={listing.id}
+          image={listing.image}
+            id={listing.id}
             listing={listing}
             onRemoveListing={onRemoveListing}
+            handleAddItem={handleAddItem}
             onAddItem={onAddItem}
           />
         ))}
@@ -20,4 +23,4 @@ function ListingsContainer({ listings, onRemoveListing, onAddItem }) {
   );
 }
 
-export default ListingsContainer;
+export default ListingContainer;

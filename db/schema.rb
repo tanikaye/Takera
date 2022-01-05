@@ -21,12 +21,10 @@ ActiveRecord::Schema.define(version: 2022_01_03_221651) do
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "item_id", null: false
+    t.integer "user_id"
+    t.integer "item_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["item_id"], name: "index_purchases_on_item_id"
-    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,6 +35,4 @@ ActiveRecord::Schema.define(version: 2022_01_03_221651) do
     t.string "email"
   end
 
-  add_foreign_key "purchases", "items"
-  add_foreign_key "purchases", "users"
 end

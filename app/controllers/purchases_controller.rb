@@ -23,7 +23,7 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.permit(:user_id, :item_id)
+    params.permit(:item_id, :user_id)
   end
 
   def find_purchase
