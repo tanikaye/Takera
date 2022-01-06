@@ -14,6 +14,14 @@ class UsersController < ApplicationController
     render json: user, status: :created
   end
 
+  def create
+    # byebug
+    new_user = User.create!(user_params)
+    session[:user_id] = new_user.id
+    # byebug
+    render json: new_user, status: :created
+end
+
   def destroy
     user = find_user
     user.destroy
