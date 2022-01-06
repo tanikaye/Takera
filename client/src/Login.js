@@ -30,12 +30,12 @@ function Login({ onLogin }) {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button type="submit">Login</button>
+      {/* <button type="submit">Login</button> */}
       <label htmlFor="username">Password: </label>
       <input
         type="text"
         id="username"
-        value={username}
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <button type="submit">Login</button>

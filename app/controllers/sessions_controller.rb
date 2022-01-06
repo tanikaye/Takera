@@ -2,11 +2,11 @@ class SessionsController < ApplicationController
 
   def create
     # byebug
-    user = User.find_by(name: params[:name])
+    user = User.find_by(name: params[:username])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
       # byebug
-    render json: {user: user, session: session }, status: :ok
+    render json: user, status: :ok
     else
       render json: {error: "No Bueno"}, status: :unauthorized
     end

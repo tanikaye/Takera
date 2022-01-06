@@ -18,6 +18,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [items, setItems] = useState([]);
   const [user, setUser] = useState(null);
+  console.log("henceforth is the user", user)
 
   // const [boughtItem, setBoughtItem] = useState([]);
 
@@ -35,7 +36,7 @@ function App() {
       },
       body: JSON.stringify({
         item_id: id,
-        user_id: 1
+        user_id: user.id
       }),
     })
       .then((r) => r.json())
@@ -56,6 +57,7 @@ function App() {
   }, []);
 
   function handleLogin(user) {
+    console.log("working")
     setUser(user);
     console.log("this is the user", user)
   }
@@ -92,12 +94,13 @@ function App() {
     <div className="app">
           {/* <Header onChangePage={setPage}/> */}
 
-          <NavBar/>
+          <NavBar setUser={setUser} user={user}/>
           <Header onSearch={setSearch} />
           <Switch>
 
         <Route path ="/ListingContainer">
               <ListingContainer
+              user={user}
               handleAddItem={handleAddItem}
               items={items}
               onAddItem={onAddItem}
@@ -106,7 +109,7 @@ function App() {
         </Route>
 
         <Route path="/PurContainer">
-              <PurContainer items={items} onRemoveListing={handleRemoveListing}/>
+              <PurContainer items={items} onRemoveListing={handleRemoveListing} user={user}/>
         </Route>
 
         <Route path ="/About">
@@ -118,10 +121,10 @@ function App() {
               </Route>
 
               <Route path ="/SignUp">
-              <SignUp/>
+              <SignUp onLogin={handleLogin}/>
               </Route>
 
-             
+
 
 
 

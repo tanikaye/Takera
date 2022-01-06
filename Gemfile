@@ -18,6 +18,8 @@ gem 'puma', '~> 5.0'
 
 gem "sqlite3"
 
+gem "faker"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

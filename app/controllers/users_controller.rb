@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  has_secure_password
 
   def index
     render json: User.all
@@ -39,6 +38,7 @@ def create
     password: params[:password],
     password_confirmation: params[:password_confirmation])
   # session[:user_id] = user.id
+  # byebug
   render json: user, status: :created
 end
 
