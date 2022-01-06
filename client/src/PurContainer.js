@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PurCard from "./PurCard";
 
-function PurContainer({ listings, onRemoveListing, items }) {
+function PurContainer({ listings, onRemoveListing, items, user }) {
   // const [purchases, setPurchases] = useState([]);
 
 
@@ -10,8 +10,11 @@ function PurContainer({ listings, onRemoveListing, items }) {
 
 // items are the list of purchased items
 console.log("the following are the items", items)
+console.log("the following is the userguy", user)
+
   return (
     <main>
+      <h2>Welcome, {user.name}, to your past orders page :)</h2>
       <ul className="cards">
         {items.map((item) => (
           <PurCard

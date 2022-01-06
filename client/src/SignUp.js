@@ -2,35 +2,39 @@ import React, { useState } from "react";
 
 
 function SignUp({ onLogin }) {
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
+    // console.log('whatever')
     fetch("/SignUp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username,
+        name,
         password,
         password_confirmation: passwordConfirmation,
       }),
     })
       .then((r) => r.json())
-      .then(onLogin);
+      .then((data) => {
+        onLogin(data)
+        console.log("the data", data)
+      });
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+      <label htmlFor="name">name:</label>
       <input
         type="text"
-        id="username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        id="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
       <label htmlFor="password">Password:</label>
       <input

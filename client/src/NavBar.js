@@ -1,18 +1,16 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-function NavBar() {
+function NavBar({ setUser, user }) {
 
-//   function handleLogoutClick() {
-//     fetch("/logout", {
-//         method: "DELETE"
-//     })
-//         .then((r) => {
-//             if (r.ok) {
-//                 setUser(null);
-//             }
-//         });
-// }
+  function handleLogoutClick() {
+    console.log("logged out", user)
+    fetch("/users", {
+        method: "DELETE"
+    })
+        .then(r=>r.json())
+        .then(setUser(null));
+}
 
     return (
         <nav className = "navBar">
@@ -21,7 +19,9 @@ function NavBar() {
             <Link className="hello" to="/PurContainer">Purchases</Link>
             <Link className="hello" to="/Login">Login</Link>
             <Link className="hello" to="/SignUp">SignUp</Link>
-            <Link className="hello" to="/Logout">Logout</Link>
+            <button onClick={handleLogoutClick}>
+            <Link className="hello" to="/Logout" >Logout</Link>
+            </button>
 
 
         </nav>
