@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   def create
     # byebug
     user = User.find_by(name: params[:name])
@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       # byebug
     render json: {user: user, session: session }, status: :ok
     else
-      render json: {error: "FORBIDDEN"}, status: :unauthorized
+      render json: {error: "No Bueno"}, status: :unauthorized
     end
   end
 
