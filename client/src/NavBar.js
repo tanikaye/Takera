@@ -10,6 +10,7 @@ function NavBar() {
             <Link className="hello" to="/ListingContainer">Items</Link>
             <Link className="hello" to="/About">About</Link>
             <Link className="hello" to="/PurContainer">Purchases</Link>
+            <Link className="hello" to="/Login">Login</Link>
         </nav>
     );
 }

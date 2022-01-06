@@ -5,6 +5,8 @@ import ListingContainer from "./ListingContainer";
 import PurContainer from "./PurContainer";
 import NavBar from "./NavBar";
 import About from "./About";
+import Login from "./Login";
+
 
 // import NavBar from "./NavBar";
 
@@ -13,6 +15,8 @@ function App() {
   const [listings, setListings] = useState([]);
   const [search, setSearch] = useState("");
   const [items, setItems] = useState([]);
+  const [user, setUser] = useState(null);
+
   // const [boughtItem, setBoughtItem] = useState([]);
 
 
@@ -49,6 +53,14 @@ function App() {
       .then(data => setListings(data));
   }, []);
 
+  function handleLogin(user) {
+    setUser(user);
+  }
+
+  // function handleLogout() {
+  //   setUser(null);
+  // }
+
   // function sayHello() {
   //   alert('You clicked me!');
 
@@ -76,6 +88,7 @@ function App() {
           <NavBar/>
           <Header onSearch={setSearch} />
           <Switch>
+
         <Route path ="/ListingContainer">
               <ListingContainer
               handleAddItem={handleAddItem}
@@ -84,12 +97,19 @@ function App() {
         listings={displayedListings}
         onRemoveListing={handleRemoveListing}/>
         </Route>
+
         <Route path="/PurContainer">
               <PurContainer items={items} onRemoveListing={handleRemoveListing}/>
         </Route>
+
         <Route path ="/About">
               <About/>
-        </Route>
+              </Route>
+
+              <Route path ="/Login">
+              <Login onLogin={handleLogin}/>
+              </Route>
+
 
     </Switch>
 

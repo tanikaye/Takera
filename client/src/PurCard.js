@@ -14,10 +14,10 @@ function PurCard({
 
   // /${id}
   function handleDeleteClick(id) {
-    fetch(`/purchases/${id}`, {
+    fetch(`/purchases/${purchasedItem.id}`, {
       method: "DELETE",
     });
-    onRemoveListing(id);
+    onRemoveListing(purchasedItem.id);
   }
 
   console.log("this is the purchased item", purchasedItem)
