@@ -6,7 +6,8 @@ import PurContainer from "./PurContainer";
 import NavBar from "./NavBar";
 import About from "./About";
 import Login from "./Login";
-import SignUp from "./SignUp"
+import SignUp from "./SignUp";
+
 
 
 // import NavBar from "./NavBar";
@@ -63,9 +64,9 @@ function App() {
   //   setPassword(password);
   // }
 
-  // function handleLogout() {
-  //   setUser(null);
-  // }
+  function handleLogout() {
+    setUser(null);
+  }
 
   // function sayHello() {
   //   alert('You clicked me!');
@@ -119,6 +120,10 @@ function App() {
               <Route path ="/SignUp">
               <SignUp/>
               </Route>
+
+             
+
+
 
 
     </Switch>

@@ -46,7 +46,7 @@ function PurCard({
             ☆
          </button>
         )} */}
-        {/* <strong>{name}</strong> */}
+        <strong>{purchasedItem.name}</strong>
 
         <button onClick={handleDeleteClick} className="emoji-button delete">
           🗑
