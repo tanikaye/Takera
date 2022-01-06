@@ -6,6 +6,7 @@ import PurContainer from "./PurContainer";
 import NavBar from "./NavBar";
 import About from "./About";
 import Login from "./Login";
+import SignUp from "./SignUp"
 
 
 // import NavBar from "./NavBar";
@@ -55,7 +56,12 @@ function App() {
 
   function handleLogin(user) {
     setUser(user);
+    console.log("this is the user", user)
   }
+
+  // function handlePassword(password) {
+  //   setPassword(password);
+  // }
 
   // function handleLogout() {
   //   setUser(null);
@@ -107,7 +113,11 @@ function App() {
               </Route>
 
               <Route path ="/Login">
-              <Login onLogin={handleLogin}/>
+              <Login onLogin={handleLogin} />
+              </Route>
+
+              <Route path ="/SignUp">
+              <SignUp/>
               </Route>
 
 
