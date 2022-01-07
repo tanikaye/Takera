@@ -29,6 +29,8 @@ function App() {
     // e.preventDefault();
     // setBoughtItem(e.target.value)
     // console.log("here is the bog=ught item", boughtItem)
+    // console.log('this is use', user)
+
     fetch("/purchases", {
       method: "POST",
       headers: {
@@ -66,9 +68,9 @@ function App() {
   //   setPassword(password);
   // }
 
-  function handleLogout() {
-    setUser(null);
-  }
+  // function handleLogout() {
+  //   setUser(null);
+  // }
 
   // function sayHello() {
   //   alert('You clicked me!');
