@@ -11,7 +11,7 @@ body {
 
 header {
   border-bottom: 1px #ccc solid;
-  background: rgb(67, 95, 218);
+  background: rgb(40, 56, 131);
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ main {
 }
 
 .app {
-  background-color: yellow;
+  background-color: beige;
 }
 
 .card {
@@ -137,6 +137,38 @@ main {
   font-size: 1rem;
 }
 
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(131, 131, 117);
+  padding: 15px;
+}
+
+.sign-up-prompt {
+  text-align: center;
+}
+
+.image-div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benderpic {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c3po {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hello {
+  font-size: large;
+}
 
 /* body {
   margin: 0;

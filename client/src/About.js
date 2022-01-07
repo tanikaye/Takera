@@ -14,6 +14,17 @@ here is the about info
 <br>
 </br>
 
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+
+
 
 ### Functionalities
 
@@ -21,15 +32,19 @@ The app consists of a few functionalities and data. We start off with the json f
 <br>
 </br>
 
+<br>
+</br>
+
+<br>
+</br>
 ### Result Resource
 
-This app allows you to create a post or delete one within the profile of Batman. In our friends list you can add a new one and all this information that is added or removed will be reflected within the database.
-
+It's the year 3022 and people now owwn their own personal robots. This app allows you to browse through a list of robots and purchase one, or many!
 <br>
 </br>
 ### How to obtain this code
 
-To use this code, add or extract a part of it you can use github. First you must go on the github website and navigate to where our code is located(https://github.com/dominickub/social-media-app.git). Once you are there, you can copy the SSH key, go into your terminal, find the directory where you would like to place it in and use the commands: git clone …@github.com, cd into the file and code..
+To use this code, add or extract a part of it you can use github. First you must go on the github website and navigate to where our code is located(https://github.com/tanikaye/Takera). Once you are there, you can copy the SSH key, go into your terminal, find the directory where you would like to place it in and use the commands: git clone …@github.com, cd into the file and code..
 </p>
 
         </div>

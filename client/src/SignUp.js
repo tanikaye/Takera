@@ -28,6 +28,7 @@ function SignUp({ onLogin }) {
   }
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">name:</label>
       <input
@@ -52,6 +53,42 @@ function SignUp({ onLogin }) {
       />
       <button type="submit">Submit</button>
     </form>
+    <div className="c3po">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY9tNLmWMqh647EqnW6Dqgu4vbehrl2JI1w&usqp=CAU" alt="c3po"/>
+
+    </div>
+    </>
+
   );
 }
 
