@@ -4,7 +4,7 @@ import Search from "./Search";
 function Header({ onSearch }) {
   return (
     <header>
-      <h1>
+      <h1 className="takera">
         <span className="logo" role="img">
           ☮
         </span>
