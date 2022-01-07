@@ -8,7 +8,7 @@ function ListingContainer({ listings, onRemoveListing, onAddItem, items, handleA
   if (user) {
     return (
       <main className="page">
-      <h1>hi {user.name}</h1>
+      <h1 className="browse">Hi {user.name}! All Robots are 50% Off Today, Have Fun Browsing!</h1>
       <ul className="cards">
         {listings.map((listing) => (
           <ListingCard

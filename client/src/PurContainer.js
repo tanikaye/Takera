@@ -14,7 +14,7 @@ console.log("the following is the userguy", user)
 
   return (
     <main>
-      <h2>Welcome, {user.name}, to your past orders page :)</h2>
+      <h2>Welcome, {user.name}, To Your Purchases Page :) <br></br>If You'd Like To Return An Item, Please Dump It In The Trash Can.</h2>
       <ul className="cards">
         {items.map((item) => (
           <PurCard

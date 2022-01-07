@@ -27,7 +27,7 @@ header h1 {
 .logo {
   margin-right: 0.5rem;
   color: transparent;
-  text-shadow: 0 0 0 blue;
+  text-shadow: 0 0 0 red;
 }
 
 .searchbar {
@@ -87,6 +87,7 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 60px;
 }
 
 .app {
@@ -100,6 +101,10 @@ main {
   border: 1px solid #ccc;
   width: 300px;
   text-align: center;
+  border: solid;
+  border-color: navy;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .card .image {
@@ -114,11 +119,11 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0.25rem;
+  padding: 1rem;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  border-bottom-right-radius: 5px;
-  background: white;
+  border-bottom-right-radius: 25px;
+  background: cornflowerblue;
 }
 
 .card .image img {
@@ -168,7 +173,21 @@ main {
 
 .hello {
   font-size: large;
+  color: whitesmoke;
 }
+
+.takera {
+  color: beige;
+}
+
+.browse {
+  text-align: center;
+}
+
+/* .purpagetext{
+  background-color: cornflowerblue;
+} */
+
 
 /* body {
   margin: 0;
